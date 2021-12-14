@@ -1,4 +1,4 @@
-## Racing 3D: Events
+## Pegaxy Racing SDK
 
 ### 1. Event definitions:
 
@@ -132,3 +132,18 @@ interface EventResponse {
     type: "cancelMatching"
 }
 ```
+
+### 3. SDK Usage:
+
+```javascript
+interface Window {
+	PegaxyRacingSDK: RacingSDK;
+}
+```
+
+| Function         | Parameters                              | Description                                                      |
+| ---------------- | --------------------------------------- | ---------------------------------------------------------------- |
+| addEventListener | (eventType: string, listener: Function) | Register listener to an event type. For example: getPegasSuccess |
+| getPegas         | None                                    | Get list of pegas (See event details above)                      |
+| getRoomForPega   | (pegaId: number)                        | Get room for a pega (See event details above)                    |
+| cancelMatching   | None                                    | Cancel the current matchmaking                                   |
